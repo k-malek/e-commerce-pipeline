@@ -30,7 +30,7 @@ def fake_store_api():
     """ Main pipeline for the Fake Store API """
     pipeline = dlt.pipeline(
         pipeline_name="fake_store",
-        destination="duckdb",
+        destination=dlt.destinations.duckdb("data/fake_store.duckdb"),
         dataset_name="raw_fake_store"
     )
 

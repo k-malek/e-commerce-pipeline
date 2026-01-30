@@ -33,7 +33,7 @@ def load_dummyjson_api():
     """ Load the DummyJSON API """
     pipeline = dlt.pipeline(
         pipeline_name="dummyjson",
-        destination="duckdb",
+        destination=dlt.destinations.duckdb("data/dummyjson.duckdb"),
         dataset_name="raw_dummyjson"
     )
     load_info = pipeline.run([
