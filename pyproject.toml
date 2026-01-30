@@ -8,6 +8,7 @@ dependencies = [
     "dbt-duckdb>=1.7.0",
     "dlt[duckdb,workspace]>=0.3.0",
     "duckdb>=1.4.3",
+    "numpy>=1.24.0",
     "python-dotenv>=1.0.0",
     "requests>=2.31.0",
 ]
