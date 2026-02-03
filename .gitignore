@@ -46,6 +46,7 @@ profiles.yml
 .env.*.local
 
 # Data warehouse files
+data/
 warehouse.duckdb
 warehouse.duckdb.wal
 *.sqlite

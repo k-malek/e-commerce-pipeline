@@ -1,6 +1,9 @@
 import dlt
+import logging
 import os
 import requests
+
+logger = logging.getLogger(__name__)
 
 @dlt.resource(name="products", write_disposition="replace")
 def get_products():
@@ -39,8 +42,7 @@ def fake_store_api():
         get_users(),
         get_carts(),
     ])
-    
-    print(load_info)
+    logger.info(load_info)
     return pipeline
 
 if __name__ == "__main__":

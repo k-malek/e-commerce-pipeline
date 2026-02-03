@@ -1,6 +1,9 @@
 import dlt
-import requests
+import logging
 import os
+import requests
+
+logger = logging.getLogger(__name__)
 
 @dlt.resource(name="products", write_disposition="merge", primary_key="id")
 def get_products():
@@ -41,7 +44,7 @@ def load_dummyjson_api():
         get_users(),
         get_carts()
     ])
-    print(load_info)
+    logger.info(load_info)
     return pipeline
 
 if __name__ == "__main__":

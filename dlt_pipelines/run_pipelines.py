@@ -1,10 +1,11 @@
 """ Run the DLT pipelines """
 
+import logging
+
 from sources.dummyjson_api import load_dummyjson_api
 from sources.fake_store_api import fake_store_api
-from logging import getLogger
 
-logger = getLogger(__name__)
+logger = logging.getLogger(__name__)
 
 def run_pipelines():
     """ Run the DLT pipelines """
@@ -15,4 +16,5 @@ def run_pipelines():
     logger.info("Pipelines completed")
 
 if __name__ == "__main__":
+    logging.basicConfig(level=logging.INFO)
     run_pipelines()
